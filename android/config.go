@@ -1080,6 +1080,9 @@ func (c *deviceConfig) GcovCoverageEnabled() bool {
 	return Bool(c.config.productVariables.GcovCoverage)
 }
 
+func (c *deviceConfig) SpecificCameraParametersLibrary() string {
+        return String(c.config.productVariables.Arrow.Specific_camera_parameter_library)
+}
 // NativeCoverageEnabledForPath returns whether (GCOV- or Clang-based) native
 // code coverage is enabled for path. By default, coverage is not enabled for a
 // given path unless it is part of the NativeCoveragePaths product variable (and
