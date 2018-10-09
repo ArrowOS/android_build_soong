@@ -57,6 +57,11 @@ var (
 			// core (cortex-a55) and is sensitive to ordering.
 			"-mcpu=cortex-a55",
 		},
+		"cortex-a76": []string{
+			// Use the cortex-a55 since it is similar to the little
+			// core (cortex-a55) and is sensitive to ordering.
+			"-mcpu=cortex-a55",
+		},
 		"kryo": []string{
 			// Use the cortex-a57 cpu since some compilers
 			// don't support a Kryo specific target yet.
@@ -90,6 +95,7 @@ func init() {
 		"cortex-a55",
 		"cortex-a73",
 		"cortex-a75",
+		"cortex-a76",
 		"kryo",
 		"kryo300",
 		"exynos-m1",
@@ -165,6 +171,7 @@ var (
 		"cortex-a55": "${config.Arm64ClangCortexA55Cflags}",
 		"cortex-a73": "${config.Arm64ClangCortexA53Cflags}",
 		"cortex-a75": "${config.Arm64ClangCortexA55Cflags}",
+		"cortex-a76": "${config.Arm64ClangCortexA55Cflags}",
 		"kryo":       "${config.Arm64ClangKryoCflags}",
 		"exynos-m1":  "${config.Arm64ClangExynosM1Cflags}",
 		"exynos-m2":  "${config.Arm64ClangExynosM2Cflags}",

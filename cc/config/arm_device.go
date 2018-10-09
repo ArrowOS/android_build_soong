@@ -115,6 +115,11 @@ var (
 			// better solution comes around. See Bug 27340895
 			"-D__ARM_FEATURE_LPAE=1",
 		},
+		"cortex-a76": []string{
+			// Use the cortex-a55 since it is similar to the little
+			// core (cortex-a55) and is sensitive to ordering.
+			"-mcpu=cortex-a55",
+		},
 		"kryo300": []string{
 			// Adding this line just to use kryo300 in both ABIs
 			"-mcpu=cortex-a55",
@@ -172,6 +177,7 @@ func init() {
 		"cortex-a55",
 		"cortex-a73",
 		"cortex-a75",
+		"cortex-a76",
 		"krait",
 		"kryo",
 		"exynos-m1",
