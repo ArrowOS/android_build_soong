@@ -117,6 +117,7 @@ var BannerVars = []string{
 	"RECOVERY_VARIANT",
 	"WITH_SU",
 	"WITH_GMS",
+	"ARROW_TARGET_PACKAGE",
 }
 
 func Banner(make_vars map[string]string) string {
