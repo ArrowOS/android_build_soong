@@ -105,6 +105,7 @@ func installClean(ctx Context, config Config, what int) {
 		productOut("skin"),
 		productOut("obj/NOTICE_FILES"),
 		productOut("obj/PACKAGING"),
+		productOut("obj/KERNEL_OBJ"),
 		productOut("recovery"),
 		productOut("root"),
 		productOut("system"),
