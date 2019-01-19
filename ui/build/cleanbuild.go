@@ -111,11 +111,15 @@ func installClean(ctx Context, config Config, what int) {
 		productOut("obj/NOTICE_FILES"),
 		productOut("obj/PACKAGING"),
 		productOut("ramdisk"),
+<<<<<<< HEAD   (087593 soong: add support for nested structs in variableProperties)
 		productOut("debug_ramdisk"),
 		productOut("vendor-ramdisk"),
 		productOut("vendor-ramdisk-debug.cpio.gz"),
 		productOut("vendor_debug_ramdisk"),
 		productOut("test_harness_ramdisk"),
+=======
+		productOut("obj/KERNEL_OBJ/.version"),
+>>>>>>> CHANGE (be8b8c soong: installclean: give me clean kernel version)
 		productOut("recovery"),
 		productOut("root"),
 		productOut("system"),
