@@ -108,6 +108,7 @@ func installClean(ctx Context, config Config, what int) {
 		productOut("obj/NOTICE_FILES"),
 		productOut("obj/PACKAGING"),
 		productOut("ramdisk"),
+		productOut("obj/KERNEL_OBJ/.version"),
 		productOut("recovery"),
 		productOut("root"),
 		productOut("system"),
