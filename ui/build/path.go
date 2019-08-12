@@ -102,9 +102,9 @@ func SetupPath(ctx Context, config Config) {
 
 			config := paths.GetConfig(log.Basename)
 			if config.Error {
-				ctx.Printf("Disallowed PATH tool %q used: %#v", log.Basename, log.Args)
+				ctx.Verbosef("Disallowed PATH tool %q used: %#v", log.Basename, log.Args)
 				for _, line := range procPrints {
-					ctx.Println(line)
+					ctx.Verboseln(line)
 				}
 			} else {
 				ctx.Verbosef("Unknown PATH tool %q used: %#v", log.Basename, log.Args)
