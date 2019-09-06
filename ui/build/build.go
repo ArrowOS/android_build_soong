@@ -154,7 +154,7 @@ func Build(ctx Context, config Config, what int) {
 
 	ensureEmptyDirectoriesExist(ctx, config.TempDir())
 
-	SetupPath(ctx, config)
+	//SetupPath(ctx, config)
 
 	if config.StartGoma() {
 		// Ensure start Goma compiler_proxy
