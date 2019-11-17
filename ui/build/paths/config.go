@@ -74,6 +74,7 @@ func GetConfig(name string) PathConfig {
 }
 
 var Configuration = map[string]PathConfig{
+<<<<<<< HEAD   (0ed8d1 Merge tag 'android-11.0.0_r20' of https://android.googlesour)
 	"bash":    Allowed,
 	"brotli":  Allowed,
 	"ccache":  Allowed,
@@ -101,6 +102,48 @@ var Configuration = map[string]PathConfig{
 	"unzip":   Allowed,
 	"zip":     Allowed,
 
+=======
+	"bash":     Allowed,
+	"bc":       Allowed,
+	"bzip2":    Allowed,
+	"curl":     Allowed,
+	"date":     Allowed,
+	"dd":       Allowed,
+	"diff":     Allowed,
+	"cpio":     Allowed,
+	"egrep":    Allowed,
+	"expr":     Allowed,
+	"find":     Allowed,
+	"flock":    Allowed,
+	"fuser":    Allowed,
+	"getopt":   Allowed,
+	"git":      Allowed,
+	"grep":     Allowed,
+	"gzip":     Allowed,
+	"hexdump":  Allowed,
+	"jar":      Allowed,
+	"java":     Allowed,
+	"javap":    Allowed,
+	"lsof":     Allowed,
+	"m4":       Allowed,
+	"nproc":    Allowed,
+	"openssl":  Allowed,
+	"patch":    Allowed,
+	"pstree":   Allowed,
+	"python3":  Allowed,
+	"realpath": Allowed,
+	"rsync":    Allowed,
+	"sed":      Allowed,
+	"sh":       Allowed,
+	"tar":      Allowed,
+	"timeout":  Allowed,
+	"tr":       Allowed,
+	"unzip":    Allowed,
+	"xz":       Allowed,
+	"zip":      Allowed,
+	"zipinfo":  Allowed,
+  
+>>>>>>> CHANGE (87ef16 soong: Whitelist cpio for prebuilt ramdisk extraction)
 	// Host toolchain is removed. In-tree toolchain should be used instead.
 	// GCC also can't find cc1 with this implementation.
 	"ar":         Forbidden,
