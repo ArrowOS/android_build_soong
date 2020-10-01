@@ -65,6 +65,7 @@ var rewriteProperties = map[string](func(variableAssignmentContext) error){
 	"LOCAL_PROGUARD_ENABLED":               proguardEnabled,
 	"LOCAL_MODULE_PATH":                    prebuiltModulePath,
 	"LOCAL_REPLACE_PREBUILT_APK_INSTALLED": prebuiltPreprocessed,
+	"LOCAL_EXPORT_CFLAGS":                  exportCflags,
 
 	// composite functions
 	"LOCAL_MODULE_TAGS": includeVariableIf(bpVariable{"tags", bpparser.ListType}, not(valueDumpEquals("optional"))),
@@ -719,6 +720,13 @@ func cflags(ctx variableAssignmentContext) error {
 	ctx.mkvalue = ctx.mkvalue.Clone()
 	ctx.mkvalue.ReplaceLiteral(`\"`, `"`)
 	return includeVariableNow(bpVariable{"cflags", bpparser.ListType}, ctx)
+}
+
+func exportCflags(ctx variableAssignmentContext) error {
+	// The Soong replacement for EXPORT_CFLAGS doesn't need the same extra escaped quotes that were present in Make
+	ctx.mkvalue = ctx.mkvalue.Clone()
+	ctx.mkvalue.ReplaceLiteral(`\"`, `"`)
+	return includeVariableNow(bpVariable{"export_cflags", bpparser.ListType}, ctx)
 }
 
 func proguardEnabled(ctx variableAssignmentContext) error {
