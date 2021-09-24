@@ -984,7 +984,7 @@ func pathForSource(ctx PathContext, pathComponents ...string) (SourcePath, error
 // It differs from pathForSource in that the path is allowed to exist outside of the PathContext.
 func pathForSourceRelaxed(ctx PathContext, pathComponents ...string) (SourcePath, error) {
 	p := filepath.Join(pathComponents...)
-	ret := SourcePath{basePath{p, ""}, ctx.Config().srcDir}
+	ret := SourcePath{basePath{p, ""}, "."}
 
 	abs, err := filepath.Abs(ret.String())
 	if err != nil {
