@@ -92,8 +92,6 @@ func (p *buildinfoPropModule) GenerateAndroidBuildActions(ctx ModuleContext) {
 
 	if config.Eng() {
 		writeProp("ro.build.type", "eng")
-	} else if config.Debuggable() {
-		writeProp("ro.build.type", "userdebug")
 	} else {
 		writeProp("ro.build.type", "user")
 	}
